@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imprint — Paul Bederke</title>
+  <meta name="description" content="Imprint / Legal notice for the personal website of Paul Bederke." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Paul Bederke</a>
+      <nav class="nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#cv">CV</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="section container">
+      <header class="section-head">
+        <span class="section-num">§</span>
+        <h2>Imprint</h2>
+      </header>
+      <div class="prose">
+        <h3 class="sub">Information according to § 5, 6 DDG</h3>
+
+        <p>
+          Paul Bederke<br />
+          c/o GESIS – Leibniz Institute for the Social Sciences<br />
+          Unter Sachsenhausen 6–8<br />
+          50667 Cologne, Germany
+        </p>
+
+        <h3 class="sub">Contact</h3>
+        <p>
+          Email: <a href="mailto:paul.bederke@gesis.org">paul.bederke@gesis.org</a>
+        </p>
+
+        <h3 class="sub">Responsible for content</h3>
+        <p>
+          Paul Bederke is responsible for the content of this
+          website according to § 18 Abs. 2 MStV.
+        </p>
+
+        <p>
+          Paul Bederke<br />
+          c/o GESIS – Leibniz Institute for the Social Sciences<br />
+          Unter Sachsenhausen 6–8<br />
+          50667 Cologne, Germany
+        </p>
+
+        <h3 class="sub">Disclaimer</h3>
+        <p>
+          The contents of this website have been created with the utmost care.
+          However, no guarantee can be given for the correctness, completeness,
+          and topicality of the contents. External links lead to content of
+          third parties for which the respective providers are responsible.
+        </p>
+
+        <h3 class="sub">Copyright</h3>
+        <p>
+          Unless otherwise indicated, all content on this website is &copy;
+          Paul Bederke. Reproduction or use in other electronic or printed
+          publications is only permitted with prior written consent.
+        </p>
+
+        <p><a class="button" href="index.html">Back to homepage</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>&copy; <span id="year"></span> Paul Bederke.</span>
+      <span><a href="imprint.html">Imprint</a></span>
+      <span>Last updated <time datetime="2026-05">May 2026</time>.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
