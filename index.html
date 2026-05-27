@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,10 +8,24 @@
   <meta name="description" content="Personal website of Paul Bederke." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Helvetica is used as a system font; no web font needed -->
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <aside class="side-index" aria-hidden="true">
+    <a href="#about" data-target="about"><span class="dot"></span><span class="label">About</span></a>
+    <a href="#research" data-target="research"><span class="dot"></span><span class="label">Research</span></a>
+    <a href="#publications" data-target="publications"><span class="dot"></span><span
+        class="label">Publications</span></a>
+    <a href="#cv" data-target="cv"><span class="dot"></span><span class="label">CV</span></a>
+    <a href="#contact" data-target="contact"><span class="dot"></span><span class="label">Contact</span></a>
+  </aside>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="#top" class="brand">Paul Bederke</a>
@@ -26,16 +41,18 @@
 
   <main id="top">
     <section class="hero container">
-      <img src="me.jpg" alt="Portrait of Paul Bederke" class="hero-photo" />
+      <div class="hero-photo-wrap">
+        <img src="me.jpg" alt="Portrait of Paul Bederke" class="hero-photo" />
+      </div>
       <div class="hero-text">
-        <p class="eyebrow">Personal Homepage</p>
-        <h1 class="hero-title">
+        <p class="eyebrow reveal">Personal Homepage</p>
+        <h1 class="hero-title reveal">
           <em>Paul Bederke</em>
         </h1>
-        <p class="hero-sub">
+        <p class="hero-sub reveal">
           Currently Junior Researcher at
-          <a href="https://www.gesis.org/en/home">GESIS – Leibniz Institute for the Social Sciences</a>.
-          Previously at <a href="https://www.gu.se/en">Gothenburg University</a>.
+          <a href="https://www.gesis.org/en/home" target="_blank" rel="noopener noreferrer">GESIS – Leibniz Institute for the Social Sciences</a>.
+          Previously at <a href="https://www.gu.se/en" target="_blank" rel="noopener noreferrer">Gothenburg University</a>.
         </p>
       </div>
     </section>
@@ -50,13 +67,16 @@
       <div class="prose">
         <p>
           I am a Junior Researcher working at the intersection of
-          <em>political science</em> and <em>data science</em>. My work examines
-          the appearance and linkage of political parties across social science datasets.
+          <em>political science</em> and <em>computational social science</em>.
+          Together with Lea Kaftan, I build a new linkage key
+          infrastructure for political parties across social
+          science datasets. We aim to provide a comprehensive, consistent, and long-term
+          foundation for studying political entities globally and historically.
         </p>
         <p>
-          Before joining GESIS – Leibniz Institute for the Social Sciences, I worked in 
-          the research project <em>Female Leadership and Effects from African Droughts</em> (Fem‑LEAD) 
-          at the University of Gothenburg. I hold a M.A. in Politics and Public Administration 
+          Before joining GESIS – Leibniz Institute for the Social Sciences, I worked in
+          the research project <em>Female Leadership and Effects from African Droughts</em> (Fem‑LEAD)
+          at the University of Gothenburg. I hold a M.A. in Politics and Public Administration
           from the University of Konstanz.
         </p>
       </div>
@@ -69,17 +89,42 @@
         <span class="section-num">02</span>
         <h2>Research</h2>
       </header>
-      <div class="grid one-col">
+      <div class="grid two-col">
         <article class="card">
-          <h3>PolPaL</h3>
-          <p class="meta">Ongoing &middot; with Lea Kaftan</p>
+          <h3>PolPaL &ndash; Political Party Links</h3>
+          <p class="meta">Junior Researcher &middot; Ongoing &middot; PI: Lea Kaftan</p>
           <p>
-            Political Party Links (PolPaL) is a linkage key 
-            infrastructure project for the social sciences. 
-            PolPaL provides a unified linkage platform for 
-            identifying political entities across social 
+            Political Party Links (PolPaL) is a linkage key
+            infrastructure project for the social sciences.
+            PolPaL provides a unified linkage platform for
+            identifying political entities across social
             science datasets.
           </p>
+          <p>
+            PolPaL, inspired by Party Facts, provides new
+            linkage features, broader metadata, and extended
+            coverage. It offers researchers a comprehensive,
+            consistent, and long-term foundation for studying
+            political entities globally and historically.
+          </p>
+          <a class="card-link" href="#" target="_blank" rel="noopener noreferrer">Coming Soon &rarr;</a>
+        </article>
+        <article class="card">
+          <h3>Fem-LEAD &ndash; Female Leadership and Effects from African Droughts</h3>
+          <p class="meta">Associate Researcher &middot; 2025/03&ndash;2026/01 &middot; PI: Aksel Sundström</p>
+          <p>
+            Fem-LEAD seeks to understand the connections between
+            weather-related disasters and women’s political standing
+            in politics in African countries. The project focuses on
+            environmental shocks, public opinion, and political representation.
+          </p>
+          <p>
+            I prepared geo-coded datasets spanning survey, palaeo-climate, and agriculture data,
+            and collected sub-national data on women's political representation across African countries.
+            For South Africa, I gathered contact details of local politicians, disaster declarations,
+            and newspaper coverage.
+          </p>
+          <a class="card-link" href="https://www.gu.se/en/research/female-leadership-and-effects-from-african-droughts-fem-lead" target="_blank" rel="noopener noreferrer">Gothenburg University &rarr;</a>
         </article>
       </div>
     </section>
@@ -94,6 +139,26 @@
 
       <h3 class="sub">Working papers</h3>
       <ol class="pubs">
+
+        <li>
+          <span class="year">2026</span>
+          <div>
+            <span class="title">Linking Political Parties Across Time and Space: Introducing Political Party Links
+              (PolPaL).</span>
+            <span class="authors">Paul Bederke, Lea Kaftan, Jakob Mansius, & Selcuk Timur Uluer.</span>
+            <em>last presented at WhoGov Workshop 2025</em>.
+          </div>
+        </li>
+
+        <li>
+          <span class="year">2026</span>
+          <div>
+            <span class="title">It takes a village to maintain a database: Communitizing the provision of common goods
+              for the social sciences.</span>
+            <span class="authors">Paul Bederke, Lea Kaftan, & Selcuk Timur Uluer.</span>
+          </div>
+        </li>
+
         <li>
           <span class="year">2026</span>
           <div>
@@ -109,32 +174,17 @@
         <li>
           <span class="year">2023</span>
           <div>
-            <span class="title">Harmonizing and linking party information: The ESS as an example of complex data linking (v0.1).</span>
+            <span class="title">Harmonizing and linking party information: The ESS as an example of complex data linking
+              (v0.1).</span>
             <span class="authors">Paul Bederke, & Holger Döring.</span>
             <em>Zenodo</em>.
-            <a href="https://doi.org/10.5281/zenodo.10061174">https://doi.org/10.5281/zenodo.10061174</a>
+            <a href="https://doi.org/10.5281/zenodo.10061174" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.10061174</a>
           </div>
         </li>
       </ol>
-      
+
       <h3 class="sub">On-Going Work</h3>
       <ol class="pubs">
-        <li>
-          <span class="year">2026</span>
-          <div>
-            <span class="title">Linking Political Parties Across Time and Space: Introducing Political Party Links (PolPaL).</span>
-            <span class="authors">Paul Bederke, Lea Kaftan, Jakob Mansius, & Selcuk Timur Uluer.</span>
-            <em>last presented at WhoGov Workshop 2025</em>.
-          </div>
-        </li>
-                
-        <li>
-          <span class="year">2026</span>
-          <div>
-            <span class="title">Linking Political Parties Across Time and Space: Introducing Political Party Links (PolPaL).</span>
-            <span class="authors">Paul Bederke, Lea Kaftan, & Selcuk Timur Uluer.</span>
-          </div>
-        </li>
 
         <li>
           <span class="year">2025</span>
@@ -155,33 +205,223 @@
         <h2>Curriculum vit&aelig;</h2>
       </header>
       <div class="prose">
+        <!--
         <h3 class="sub">Experience</h3>
         <dl class="timeline">
-          <dt>Since 2025</dt><dd>Junior Researcher, GESIS – Leibniz Institute for the Social Sciences</dd>
-          <dt>2024&ndash;2025</dt><dd>Associate Researcher, University of Gothenburg</dd>
-          <dt>2022&ndash;2024</dt><dd>Researcher Assistant, University of Konstanz</dd>
-          <dt>2018&ndash;2021</dt><dd>Student Research Assistant , University of Bremen</dd>
-          <dt>2020</dt><dd>Research Intern (V-Dem Institute), University of Gothenburg</dd>
+          <dt>Since 2025</dt>
+          <dd>Junior Researcher, GESIS – Leibniz Institute for the Social Sciences (Cologne)</dd>
+          <dt>2024&ndash;2025</dt>
+          <dd>Associate Researcher, University of Gothenburg</dd>
+          <dt>2022&ndash;2024</dt>
+          <dd>Researcher Assistant, University of Konstanz</dd>
+          <dt>2018&ndash;2021</dt>
+          <dd>Student Research Assistant , University of Bremen</dd>
+          <dt>2020</dt>
+          <dd>Research Intern (V-Dem Institute), University of Gothenburg</dd>
         </dl>
 
         <h3 class="sub">Education</h3>
         <dl class="timeline">
-          <dt>2025</dt><dd>M.A. in Politics and Public Administration, University of Konstanz.</dd>
-          <dt>2021</dt><dd>B.A. in Political Science, University of Bremen.</dd>
+          <dt>2025</dt>
+          <dd>M.A. in Politics and Public Administration, University of Konstanz.</dd>
+          <dt>2023</dt>
+          <dd>ERASMUS+ Exchange Program, University of Gothenburg.</dd>
+          <dt>2021</dt>
+          <dd>B.A. in Political Science, University of Bremen.</dd>
+          <dt>2019</dt>
+          <dd>ERASMUS+ Exchange Program, University of Bergen.</dd>
         </dl>
+        -->
 
-        <h3 class="sub">Grants</h3>
-        <dl class="timeline">
-          <dt>2024</dt><dd>OSCARS 1st Open Call, Project: <em>01‑415‑Harmony in the Democratic Ideological Space (HarDIS)</em>. Project application together with Lea Kaftan, Sebastian Ziaja, and Alexia Katsanidou. €250.000.</dd>
-        </dl>
+        <h3 class="sub">Education and Experience</h3>
+        <figure class="map-figure">
+          <svg class="map" viewBox="-300 0 1400 700" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-label="Map of locations where Paul Bederke has studied and worked">
+            <!-- Grid -->
+            <g class="map-grid">
+              <line x1="-300" y1="175" x2="1100" y2="175" />
+              <line x1="-300" y1="350" x2="1100" y2="350" />
+              <line x1="-300" y1="525" x2="1100" y2="525" />
+              <line x1="-200" y1="0" x2="-200" y2="700" />
+              <line x1="0" y1="0" x2="0" y2="700" />
+              <line x1="200" y1="0" x2="200" y2="700" />
+              <line x1="400" y1="0" x2="400" y2="700" />
+              <line x1="600" y1="0" x2="600" y2="700" />
+              <line x1="800" y1="0" x2="800" y2="700" />
+              <line x1="1000" y1="0" x2="1000" y2="700" />
+            </g>
 
-        <h3 class="sub">Volunteer work</h3>
-        <dl class="timeline">
-          <dt>Since 2020</dt><dd>Project Coordinator. Party Facts (<a href="https://partyfacts.herokuapp.com/">https://partyfacts.herokuapp.com/</a>)</dd>
-        </dl>
+            <!-- Compass / scale label -->
+            <g class="map-meta" transform="translate(-260, 30)">
+              <text x="0" y="0">N ↑</text>
+              <text x="0" y="640" class="map-coord">Europe</text>
+            </g>
 
-        <p><a class="button" href="cv.pdf">Download full CV (PDF)</a></p>
+            <!-- Chronological path: Bremen → Bergen → Gothenburg → Bremen → Konstanz → Gothenburg → Cologne -->
+            <polyline class="map-path" points="387,277 155,21 598,115 387,277 412,467 598,115 264,352" />
+
+            <!-- Upcoming leg to Aarhus -->
+            <polyline class="map-path map-path-upcoming" points="264,352 481,169" />
+
+            <!-- Locations -->
+            <g class="map-points">
+              <!-- Bergen -->
+              <g class="map-point cat-education" data-side="right" data-city="Bergen" data-country="Norway"
+                data-items='[{"period":"2019/08–2020/07","role":"ERASMUS+ Exchange Program, University of Bergen"}]'>
+                <circle cx="155" cy="21" r="6" />
+                <line class="map-tick" x1="155" y1="21" x2="215" y2="21" />
+                <text x="225" y="25" class="map-city">Bergen</text>
+              </g>
+
+              <!-- Oslo -->
+              <g class="map-point cat-conference" data-side="right" data-city="Oslo" data-country="Norway"
+                data-items='[{"period":"2025/09","role":"WhoGov Workshop 2025, University of Oslo"}]'>
+                <circle cx="517" cy="38" r="6" />
+                <line class="map-tick" x1="517" y1="38" x2="577" y2="38" />
+                <text x="587" y="42" class="map-city">Oslo</text>
+              </g>
+
+              <!-- Kristiansand -->
+              <g class="map-point cat-education" data-side="left" data-city="Kristiansand" data-country="Norway"
+                data-items='[{"period":"2022/07","role":"European Integration Summer School 2022, University of Agder"}]'>
+                <circle cx="333" cy="100" r="6" />
+                <line class="map-tick" x1="333" y1="100" x2="273" y2="100" />
+                <text x="263" y="104" class="map-city" text-anchor="end">Kristiansand</text>
+              </g>
+
+              <!-- Gothenburg -->
+              <g class="map-point cat-multi" data-side="left" data-city="Gothenburg" data-country="Sweden" data-items='[
+                  {"period":"2020/08-2020/10","role":"Research Intern, V‑Dem Institute, University of Gothenburg"},
+                  {"period":"2023/01-2023/06","role":"ERASMUS+ Exchange Program, University of Gothenburg"},
+                  {"period":"2024/03–2025/01","role":"Associate Researcher, Fem‑LEAD project, University of Gothenburg"},
+                  {"period":"2025/06","role":"Demscore Conference 2025, University of Gothenburg"}]'>
+                <circle cx="598" cy="115" r="6" />
+                <circle class="cat-arc cat-education" cx="598" cy="115" r="6" stroke-dasharray="12.566 25.133"
+                  stroke-dashoffset="0" />
+                <circle class="cat-arc cat-work" cx="598" cy="115" r="6" stroke-dasharray="12.566 25.133"
+                  stroke-dashoffset="-12.566" />
+                <circle class="cat-arc cat-conference" cx="598" cy="115" r="6" stroke-dasharray="12.566 25.133"
+                  stroke-dashoffset="-25.133" />
+                <line class="map-tick" x1="598" y1="115" x2="538" y2="115" />
+                <text x="528" y="119" class="map-city" text-anchor="end">Gothenburg</text>
+              </g>
+
+              <!-- Aarhus -->
+              <g class="map-point is-upcoming" data-side="right" data-city="Aarhus" data-country="Denmark"
+                data-items='[{"period":"From 2026/09","role":"PhD program, Aarhus University"}]'>
+                <circle cx="481" cy="169" r="6" />
+                <line class="map-tick" x1="481" y1="169" x2="541" y2="169" />
+                <text x="551" y="166" class="map-city">Aarhus</text>
+                <text x="551" y="184" class="map-inst">Upcoming · From 2026/09</text>
+              </g>
+
+              <!-- Bremen (starting point) -->
+              <g class="map-point is-start" data-side="right" data-city="Bremen" data-country="Germany" data-items='[
+                  {"period":"1997/11/17","role":"Hometown"},
+                  {"period":"2017/10–2021/09","role":"B.A. Political Science, University of Bremen"},
+                  {"period":"2018/05–2021/03","role":"Student Research Assistant, University of Bremen"}]'>
+                <circle cx="387" cy="277" r="7" />
+                <line class="map-tick" x1="387" y1="277" x2="447" y2="277" />
+                <text x="457" y="274" class="map-city">Bremen</text>
+                <text x="457" y="292" class="map-inst">Hometown</text>
+              </g>
+
+              <!-- Cologne -->
+              <g class="map-point cat-work" data-side="left" data-city="Cologne" data-country="Germany"
+                data-items='[
+                  {"period":"Since 2025/01","role":"Junior Researcher, GESIS – Leibniz Institute for the Social Sciences"},
+                  {"period":"2026/01","role":"Modern Infrastructures for the Study of Parties – Co-Organized Community Workshop at GESIS"}]'>
+                <circle cx="264" cy="352" r="6" />
+                <line class="map-tick" x1="264" y1="352" x2="204" y2="352" />
+                <text x="194" y="349" class="map-city" text-anchor="end">Cologne</text>
+                <text x="194" y="367" class="map-inst" text-anchor="end">Currently</text>
+              </g>
+
+              <!-- Konstanz -->
+              <g class="map-point cat-education" data-side="right" data-city="Konstanz" data-country="Germany"
+                data-items='[
+                  {"period":"2021/10-2025/01","role":"M.A. Politics and Public Administration, University of Konstanz"},
+                  {"period":"2022/01–2023/03","role":"Research Assistant, University of Konstanz"},
+                  {"period":"2023/10–2024/05","role":"Research Assistant, University of Konstanz"}]'>
+                <circle cx="412" cy="467" r="6" />
+                <line class="map-tick" x1="412" y1="467" x2="472" y2="467" />
+                <text x="482" y="471" class="map-city">Konstanz</text>
+              </g>
+
+              <!-- Annecy -->
+              <g class="map-point cat-education" data-side="left" data-city="Annecy" data-country="France"
+                data-items='[{"period":"2026/01","role":"S3 School – Sustainable Scientific Software School, LAPP"}]'>
+                <circle cx="209" cy="529" r="6" />
+                <line class="map-tick" x1="209" y1="529" x2="149" y2="529" />
+                <text x="139" y="533" class="map-city" text-anchor="end">Annecy</text>
+              </g>
+
+              <!-- Rome -->
+              <g class="map-point cat-conference" data-side="right" data-city="Rome" data-country="Italy"
+                data-items='[{"period":"2025/03","role":"1st OSCARS Annual General Meeting, OSCARS"}]'>
+                <circle cx="633" cy="669" r="6" />
+                <line class="map-tick" x1="633" y1="669" x2="693" y2="669" />
+                <text x="703" y="673" class="map-city">Rome</text>
+              </g>
+
+              <!-- Graz -->
+              <g class="map-point cat-love" data-side="right" data-city="Graz" data-country="Austria"
+                data-items='[{"period":"Since 2025/09","role":"Simply lovely!"}]'>
+                <circle cx="829" cy="488" r="6" />
+                <line class="map-tick" x1="829" y1="488" x2="889" y2="488" />
+                <text x="899" y="492" class="map-city">Graz</text>
+              </g>
+            </g>
+          </svg>
+
+          <div class="map-popup" role="dialog" aria-hidden="true" aria-labelledby="map-popup-city">
+            <button class="map-popup-close" type="button" aria-label="Close">&times;</button>
+            <p class="map-popup-eyebrow"><span class="map-popup-country"></span></p>
+            <h4 class="map-popup-city" id="map-popup-city"></h4>
+            <dl class="map-popup-list timeline"></dl>
+          </div>
+        </figure>
       </div>
+
+      <!--
+      <h3 class="sub">Grants</h3>
+      <dl class="timeline">
+        <dt>2024</dt>
+        <dd>OSCARS 1st Open Call, Project: <em>01‑415‑Harmony in the Democratic Ideological Space (HarDIS)</em>.
+          Project application together with Lea Kaftan, Sebastian Ziaja, and Alexia Katsanidou. €250.000.</dd>
+      </dl>
+
+      <h3 class="sub">Volunteer work</h3>
+      <dl class="timeline">
+        <dt>Since 2020</dt>
+        <dd>Project Coordinator. Party Facts (<a
+            href="https://partyfacts.herokuapp.com/">https://partyfacts.herokuapp.com/</a>)</dd>
+      </dl>
+      -->
+
+      <h3 class="sub">Download</h3>
+      <a class="cv-titleblock" href="cv.pdf" download aria-label="Download full CV (PDF)">
+        <div class="cv-tb-cell cv-tb-num">05</div>
+        <div class="cv-tb-cell cv-tb-title">
+          <span class="cv-tb-eyebrow">Paper</span>
+          <span class="cv-tb-value">Curriculum Vitae</span>
+        </div>
+        <div class="cv-tb-cell cv-tb-author">
+          <span class="cv-tb-eyebrow">Author</span>
+          <span class="cv-tb-value">Paul Bederke</span>
+        </div>
+        <div class="cv-tb-cell cv-tb-rev">
+          <span class="cv-tb-eyebrow">Revision</span>
+          <span class="cv-tb-value">2026 · 05</span>
+        </div>
+        <div class="cv-tb-cell cv-tb-download">
+          <span class="cv-tb-eyebrow">File</span>
+          <span class="cv-tb-value">
+            cv.pdf
+            <span class="cv-tb-arrow" aria-hidden="true">↓</span>
+          </span>
+        </div>
+      </a>
     </section>
 
     <hr class="rule" />
@@ -191,17 +431,51 @@
         <span class="section-num">06</span>
         <h2>Contact</h2>
       </header>
-      <div class="prose">
-        <p>
-          The best way to reach me is by email at
-          <a href="mailto:[paul.bederke@gesis.org]">paul.bederke@gesis.org</a>.
-        </p>
-        <ul class="links">
-          <li><a href="https://scholar.google.com/citations?user=Tad9Q1gAAAAJ&hl=en&oi=ao">Google Scholar</a></li>
-          <li><a href="https://orcid.org/0000-0001-7555-8656">ORCID</a></li>
-          <li><a href="https://www.linkedin.com/in/paul-bederke/">LinkedIn</a></li>
-          <li><a href="https://github.com/pbederke">GitHub</a></li>
-        </ul>
+
+      <h3 class="sub">Please contact me at</h3>
+
+      <div class="contact-plaque">
+
+        <div class="contact-plaque-top">
+
+          <a class="contact-plaque-email" href="mailto:paul.bederke@gesis.org">
+            <span class="contact-callout">
+              <span class="contact-callout-label">Email</span>
+              <span class="contact-callout-addr">paul.bederke@gesis.org</span>
+            </span>
+          </a>
+
+          <div class="contact-plaque-postal">
+            <span class="contact-callout-label">Postal address</span>
+            <address>
+              GESIS &ndash; Leibniz Institute for the Social Sciences<br />
+              Unter Sachsenhausen 6&ndash;8<br />
+              50667 Cologne, Germany
+            </address>
+          </div>
+
+        </div>
+
+        <div class="contact-plaque-sigs">
+          <a class="contact-sig" href="https://scholar.google.com/citations?user=Tad9Q1gAAAAJ&amp;hl=en&amp;oi=ao"
+            target="_blank" rel="noopener noreferrer">
+            <span class="contact-sig-mono">GS</span>
+            <span class="contact-sig-label">Google Scholar</span>
+          </a>
+          <a class="contact-sig" href="https://orcid.org/0000-0001-7555-8656" target="_blank" rel="noopener noreferrer">
+            <span class="contact-sig-mono">OR</span>
+            <span class="contact-sig-label">ORCID</span>
+          </a>
+          <a class="contact-sig" href="https://www.linkedin.com/in/paul-bederke/" target="_blank"
+            rel="noopener noreferrer">
+            <span class="contact-sig-mono">LI</span>
+            <span class="contact-sig-label">LinkedIn</span>
+          </a>
+          <a class="contact-sig" href="https://github.com/pbederke" target="_blank" rel="noopener noreferrer">
+            <span class="contact-sig-mono">GH</span>
+            <span class="contact-sig-label">GitHub</span>
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -216,6 +490,140 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll progress bar
+    const progressBar = document.querySelector('.scroll-progress-bar');
+    const onScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.transform = `scaleX(${pct / 100})`;
+
+      // Parallax hero photo
+      const photo = document.querySelector('.hero-photo');
+      if (photo) {
+        const offset = Math.min(scrollTop * 0.25, 200);
+        photo.style.transform = `translateY(${offset}px)`;
+      }
+
+      // Header shrink
+      const header = document.querySelector('.site-header');
+      if (header) header.classList.toggle('is-scrolled', scrollTop > 40);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.section, .reveal, .pubs li, .card, .timeline');
+    revealEls.forEach(el => el.classList.add('reveal-init'));
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => revealObs.observe(el));
+
+    // Active section in side index + nav
+    const sections = document.querySelectorAll('main section[id]');
+    const sideLinks = document.querySelectorAll('.side-index a');
+    const navLinks = document.querySelectorAll('.nav a');
+    const activeObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          sideLinks.forEach(a => a.classList.toggle('is-active', a.dataset.target === id));
+          navLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === '#' + id));
+        }
+      });
+    }, { threshold: 0.3 });
+    sections.forEach(s => activeObs.observe(s));
+
+    // Map point popup
+    const mapFigure = document.querySelector('.map-figure');
+    const popup = document.querySelector('.map-popup');
+    if (mapFigure && popup) {
+      const popupCity = popup.querySelector('.map-popup-city');
+      const popupCountry = popup.querySelector('.map-popup-country');
+      const popupList = popup.querySelector('.map-popup-list');
+      const closeBtn = popup.querySelector('.map-popup-close');
+
+      const closePopup = () => {
+        popup.classList.remove('is-visible');
+        popup.setAttribute('aria-hidden', 'true');
+        mapFigure.querySelectorAll('.map-point.is-selected').forEach(p => p.classList.remove('is-selected'));
+      };
+
+      const openPopup = (pt) => {
+        popupCity.textContent = pt.dataset.city || '';
+        popupCountry.textContent = pt.dataset.country || '';
+
+        // Build bullet list from data-items JSON
+        popupList.innerHTML = '';
+        let items = [];
+        try { items = JSON.parse(pt.dataset.items || '[]'); } catch (e) { items = []; }
+        items.forEach(item => {
+          const dt = document.createElement('dt');
+          dt.textContent = item.period || '';
+          const dd = document.createElement('dd');
+          dd.textContent = item.role || '';
+          popupList.appendChild(dt);
+          popupList.appendChild(dd);
+        });
+
+        // Position relative to figure
+        const figRect = mapFigure.getBoundingClientRect();
+        const dot = pt.querySelector('circle');
+        const dotRect = dot.getBoundingClientRect();
+        const cx = dotRect.left + dotRect.width / 2 - figRect.left;
+        const cy = dotRect.top + dotRect.height / 2 - figRect.top;
+
+        // Show first to measure
+        popup.classList.add('is-visible');
+        popup.setAttribute('aria-hidden', 'false');
+
+        const popupW = popup.offsetWidth;
+        const popupH = popup.offsetHeight;
+        const margin = 16;
+
+        let left = cx + 20;
+        let top = cy - popupH / 2;
+        if (left + popupW + margin > figRect.width) left = cx - popupW - 20;
+        if (left < margin) left = margin;
+        if (top < margin) top = margin;
+        if (top + popupH + margin > figRect.height) top = figRect.height - popupH - margin;
+
+        popup.style.left = left + 'px';
+        popup.style.top = top + 'px';
+
+        mapFigure.querySelectorAll('.map-point.is-selected').forEach(p => p.classList.remove('is-selected'));
+        pt.classList.add('is-selected');
+      };
+
+      mapFigure.querySelectorAll('.map-point').forEach(pt => {
+        pt.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (pt.classList.contains('cat-love') || pt.classList.contains('is-upcoming')) return;
+          if (pt.classList.contains('is-selected')) {
+            closePopup();
+          } else {
+            openPopup(pt);
+          }
+        });
+      });
+
+      closeBtn.addEventListener('click', closePopup);
+      document.addEventListener('click', (e) => {
+        if (!popup.contains(e.target) && !e.target.closest('.map-point')) closePopup();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closePopup();
+      });
+      window.addEventListener('resize', closePopup, { passive: true });
+    }
   </script>
 </body>
+
 </html>
