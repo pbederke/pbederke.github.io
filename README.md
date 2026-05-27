@@ -6,8 +6,10 @@ My personal academic website, hosted with GitHub Pages.
 
 ## Structure
 
-- `index.html` — single-page site (About, Research, Publications, Teaching, CV, Contact)
+- `index.html` — single-page site (About, Research, Publications, CV, Contact)
+- `imprint.html` — imprint / legal notice sub-page
 - `styles.css` — editorial-style stylesheet (EB Garamond + Inter, warm off-white palette)
+- `me.jpg` — portrait photo shown in the hero section (round)
 - `cv.pdf` — (optional) full CV linked from the CV section
 
 ## Editing
