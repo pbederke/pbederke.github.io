@@ -95,6 +95,7 @@ em { font-style: italic; }
   font-size: 1.1rem;
   color: #4a4a4a;
   max-width: 36rem;
+  text-align: justify;
 }
 
 /* --- Rules / sections --- */
@@ -131,7 +132,7 @@ em { font-style: italic; }
   font-weight: 500;
 }
 
-.prose p { margin: 0 0 1.1rem; }
+.prose p { margin: 0 0 1.1rem; text-align: justify; }
 .prose a { color: #7a3b1f; }
 
 /* --- Research grid --- */
@@ -154,7 +155,7 @@ em { font-style: italic; }
   letter-spacing: 0.04em;
   margin: 0 0 0.5rem;
 }
-.card p { margin: 0; color: #2a2a2a; }
+.card p { margin: 0; color: #2a2a2a; text-align: justify; }
 
 /* --- Publications --- */
 .pubs {
@@ -168,6 +169,7 @@ em { font-style: italic; }
   gap: 1rem;
   padding: 0.9rem 0;
   border-top: 1px solid #e3ddcd;
+  text-align: justify;
 }
 .pubs li:last-child { border-bottom: 1px solid #e3ddcd; }
 .year {
@@ -175,6 +177,7 @@ em { font-style: italic; }
   font-size: 0.85rem;
   color: #7a7a7a;
   padding-top: 0.25rem;
+  text-align: left;
 }
 .title { font-style: italic; }
 .authors { color: #2a2a2a; }
@@ -184,6 +187,7 @@ em { font-style: italic; }
 .course-list li {
   padding: 0.6rem 0;
   border-top: 1px solid #e3ddcd;
+  text-align: justify;
 }
 .course-list li:last-child { border-bottom: 1px solid #e3ddcd; }
 
@@ -200,7 +204,7 @@ em { font-style: italic; }
   color: #7a7a7a;
   padding-top: 0.15rem;
 }
-.timeline dd { margin: 0; }
+.timeline dd { margin: 0; text-align: justify; }
 
 .button {
   display: inline-block;
