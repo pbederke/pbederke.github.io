@@ -1068,7 +1068,7 @@ section[id] { scroll-margin-top: 100px; }
 /* Category-coloured circle borders */
 :root {
   --cat-education: #380d5b;
-  --cat-work: #488ccc;
+  --cat-work: #1e3a8a;
   --cat-conference: #e0e33f;
   --cat-love: #e11d48;
 }
@@ -1217,8 +1217,7 @@ section[id] { scroll-margin-top: 100px; }
   50% { opacity: 0.4; }
 }
 .section.is-visible .map-point.is-upcoming circle {
-  animation: pulseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 1.6s both,
-             upcomingPulse 2.4s ease-in-out 2.3s infinite;
+  animation: pulseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 1.6s both;
 }
 
 /* Graz (love): faster heartbeat-like pulse */
@@ -1230,6 +1229,7 @@ section[id] { scroll-margin-top: 100px; }
 .map-point.cat-love circle:not(.cat-arc) {
   transform-origin: center;
   transform-box: fill-box;
+  filter: drop-shadow(0 0 6px rgba(225, 29, 72, 0.5));
   animation: lovePulse 0.9s ease-in-out infinite !important;
 }
 
