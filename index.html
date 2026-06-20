@@ -8,16 +8,20 @@
   <meta name="description"
     content="Paul Bederke is a Junior Researcher at GESIS – Leibniz Institute for the Social Sciences, working at the intersection of political science and computational social science. He focuses on political party data linkage (PolPaL) and cross-dataset infrastructure." />
   <meta name="author" content="Paul Bederke" />
-  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Paul Bederke, GESIS, Aarhus, university, political science, computational social science, political party data, data linkage, PolPaL, Political Party Links, Party Facts, social science infrastructure, researcher" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0a0a0a" />
   <link rel="canonical" href="https://paulbederke.eu/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Paul Bederke" />
   <meta property="og:url" content="https://paulbederke.eu/" />
   <meta property="og:title" content="Paul Bederke — Homepage" />
   <meta property="og:description"
     content="Junior Researcher at GESIS working at the intersection of political science and computational social science. Building PolPaL — a linkage key infrastructure for political parties across social science datasets." />
   <meta property="og:image" content="https://paulbederke.eu/me.jpg" />
+  <meta property="og:image:alt" content="Portrait of Paul Bederke" />
   <meta property="og:locale" content="en_GB" />
   <meta property="profile:first_name" content="Paul" />
   <meta property="profile:last_name" content="Bederke" />
@@ -28,9 +32,8 @@
   <meta name="twitter:description"
     content="Junior Researcher at GESIS working at the intersection of political science and computational social science. Building PolPaL — a linkage key infrastructure for political parties across social science datasets." />
   <meta name="twitter:image" content="https://paulbederke.eu/me.jpg" />
+  <meta name="twitter:image:alt" content="Portrait of Paul Bederke" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <!-- Helvetica is used as a system font; no web font needed -->
   <link rel="icon" type="image/svg+xml" sizes="any" href="icon.svg" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -41,32 +44,66 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Paul Bederke",
-    "url": "https://paulbederke.eu",
-    "image": "https://paulbederke.eu/me.jpg",
-    "jobTitle": "Junior Researcher",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "GESIS \u2013 Leibniz Institute for the Social Sciences",
-      "url": "https://www.gesis.org/en/home"
-    },
-    "alumniOf": [
+    "@graph": [
       {
-        "@type": "EducationalOrganization",
-        "name": "University of Konstanz"
+        "@type": "WebSite",
+        "@id": "https://paulbederke.eu/#website",
+        "url": "https://paulbederke.eu/",
+        "name": "Paul Bederke",
+        "description": "Personal homepage of Paul Bederke, Junior Researcher at GESIS working on Political Party Links (PolPaL).",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://paulbederke.eu/#person" }
       },
       {
-        "@type": "EducationalOrganization",
-        "name": "University of Bremen"
+        "@type": "Person",
+        "@id": "https://paulbederke.eu/#person",
+        "name": "Paul Bederke",
+        "givenName": "Paul",
+        "familyName": "Bederke",
+        "url": "https://paulbederke.eu/",
+        "mainEntityOfPage": "https://paulbederke.eu/",
+        "image": "https://paulbederke.eu/me.jpg",
+        "email": "mailto:paul.bederke@gesis.org",
+        "description": "Junior Researcher at GESIS \u2013 Leibniz Institute for the Social Sciences, working at the intersection of political science and computational social science. Builds PolPaL, a linkage key infrastructure for political parties across social science datasets.",
+        "jobTitle": "Junior Researcher",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "GESIS \u2013 Leibniz Institute for the Social Sciences",
+          "url": "https://www.gesis.org/en/home"
+        },
+        "affiliation": {
+          "@type": "Organization",
+          "name": "GESIS \u2013 Leibniz Institute for the Social Sciences",
+          "url": "https://www.gesis.org/en/home"
+        },
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "University of Konstanz",
+            "url": "https://www.uni-konstanz.de/en/"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "University of Bremen",
+            "url": "https://www.uni-bremen.de/en/"
+          }
+        ],
+        "knowsAbout": [
+          "political science",
+          "computational social science",
+          "political party data",
+          "data linkage",
+          "PolPaL",
+          "Party Facts",
+          "research data infrastructure"
+        ],
+        "sameAs": [
+          "https://scholar.google.com/citations?user=Tad9Q1gAAAAJ&hl=en&oi=ao",
+          "https://orcid.org/0000-0001-7555-8656",
+          "https://www.linkedin.com/in/paul-bederke/",
+          "https://github.com/pbederke"
+        ]
       }
-    ],
-    "knowsAbout": ["political science", "computational social science", "political party data", "data linkage"],
-    "sameAs": [
-      "https://scholar.google.com/citations?user=Tad9Q1gAAAAJ&hl=en&oi=ao",
-      "https://orcid.org/0000-0001-7555-8656",
-      "https://www.linkedin.com/in/paul-bederke/",
-      "https://github.com/pbederke"
     ]
   }
   </script>
@@ -457,7 +494,7 @@
 
               <!-- Friedrichshafen -->
               <g class="map-point cat-conference" data-side="right" data-city="Friedrichshafen" data-country="Germany"
-                data-items='[{"period":"2025/03","role":"1st OSCARS Annual General Meeting, OSCARS"}]'>
+                data-items='[{"period":"2025/03","role":"Dreiländertagung 2026, Zeppelin University"}]'>
                 <circle cx="633" cy="669" r="6" />
                 <line class="map-tick" x1="633" y1="669" x2="693" y2="669" />
                 <text x="703" y="673" class="map-city">Friedrichshafen</text>
