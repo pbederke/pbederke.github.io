@@ -1043,7 +1043,7 @@ section[id] { scroll-margin-top: 100px; }
 .map-path {
   fill: none;
   stroke: #d0d0d0;
-  stroke-width: 1;
+  stroke-width: 1.75;
   stroke-dasharray: 3 4;
   stroke-dashoffset: 1000;
   animation:
