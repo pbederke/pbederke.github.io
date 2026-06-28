@@ -1070,7 +1070,7 @@ section[id] { scroll-margin-top: 100px; }
   --cat-education: #380d5b;
   --cat-work: #1e3a8a;
   --cat-conference: #e0e33f;
-  --cat-love: #e11d48;
+  --cat-love: #000000;
 }
 .map-point.cat-education > circle:not(.cat-arc) { stroke: var(--cat-education); }
 .map-point.cat-work      > circle:not(.cat-arc) { stroke: var(--cat-work); }
