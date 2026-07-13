@@ -1070,12 +1070,10 @@ section[id] { scroll-margin-top: 100px; }
   --cat-education: #380d5b;
   --cat-work: #1e3a8a;
   --cat-conference: #e0e33f;
-  --cat-love: #000000;
 }
 .map-point.cat-education > circle:not(.cat-arc) { stroke: var(--cat-education); }
 .map-point.cat-work      > circle:not(.cat-arc) { stroke: var(--cat-work); }
 .map-point.cat-conference > circle:not(.cat-arc) { stroke: var(--cat-conference); }
-.map-point.cat-love      > circle:not(.cat-arc) { stroke: var(--cat-love); }
 .map-point.cat-multi     > circle:not(.cat-arc) { stroke: none; }
 
 .cat-arc {
@@ -1086,7 +1084,6 @@ section[id] { scroll-margin-top: 100px; }
 .cat-arc.cat-education  { stroke: var(--cat-education); }
 .cat-arc.cat-work       { stroke: var(--cat-work); }
 .cat-arc.cat-conference { stroke: var(--cat-conference); }
-.cat-arc.cat-love       { stroke: var(--cat-love); }
 .map-point:hover .cat-arc { stroke-width: 2; }
 
 .map-tick {
@@ -1112,9 +1109,6 @@ section[id] { scroll-margin-top: 100px; }
   cursor: pointer;
   transition: opacity 0.3s ease;
 }
-.map-point.cat-love {
-  cursor: default;
-}
 .map-point.is-upcoming {
   cursor: default;
 }
@@ -1129,8 +1123,6 @@ section[id] { scroll-margin-top: 100px; }
 .map-points .map-point.cat-work.is-selected       > circle:not(.cat-arc) { fill: var(--cat-work); }
 .map-points .map-point.cat-conference:hover > circle:not(.cat-arc),
 .map-points .map-point.cat-conference.is-selected > circle:not(.cat-arc) { fill: var(--cat-conference); }
-.map-points .map-point.cat-love:hover       > circle:not(.cat-arc),
-.map-points .map-point.cat-love.is-selected       > circle:not(.cat-arc) { fill: var(--cat-love); }
 .map-points .map-point.cat-multi:hover      > circle:not(.cat-arc),
 .map-points .map-point.cat-multi.is-selected      > circle:not(.cat-arc) { fill: #ffffff; }
 
@@ -1218,19 +1210,6 @@ section[id] { scroll-margin-top: 100px; }
 }
 .section.is-visible .map-point.is-upcoming circle {
   animation: pulseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 1.6s both;
-}
-
-/* Graz (love): faster heartbeat-like pulse */
-@keyframes lovePulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%      { opacity: 0.5; transform: scale(1.25); }
-}
-.section.is-visible .map-point.cat-love circle:not(.cat-arc),
-.map-point.cat-love circle:not(.cat-arc) {
-  transform-origin: center;
-  transform-box: fill-box;
-  filter: drop-shadow(0 0 6px rgba(225, 29, 72, 0.5));
-  animation: lovePulse 0.9s ease-in-out infinite !important;
 }
 
 /* Selected map point */
