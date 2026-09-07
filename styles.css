@@ -1028,21 +1028,21 @@ section[id] { scroll-margin-top: 100px; }
   overflow: visible;
 }
 .map-grid line {
-  stroke: #f0f0f0;
+  stroke: #e4e4e4;
   stroke-width: 1;
 }
 .map-meta text {
   font-size: 11px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  fill: #ccc;
+  fill: #b1b1b1;
   font-weight: 500;
 }
 .map-meta .map-coord { font-size: 10px; }
 
 .map-path {
   fill: none;
-  stroke: #d0d0d0;
+  stroke: #b1b1b1;
   stroke-width: 1.75;
   stroke-dasharray: 3 4;
   stroke-dashoffset: 1000;

@@ -23,10 +23,10 @@ My personal website, hosted with GitHub Pages.
 Just open `index.html` in a browser, or run any static server:
 
 ```sh
-python3 -m http.server 8000
+python3 -m http.server 8080
 ```
 
-Then visit http://localhost:8000.
+Then visit http://localhost:8080.
 
 ## Deployment
 
